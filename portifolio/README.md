@@ -1,50 +1,32 @@
-# Guilherme Israel — Portfólio
+# Portfólio — Guilherme Israel
 
-Portfólio pessoal em página única, construído em React + Vite. Estética dark, minimalista, com um único acento roxo e navegação por clique (sem router).
+Portfólio arcade/synthwave em React + Vite + TypeScript, sem bibliotecas de UI ou de animação.
 
-![Preview do portfólio](public/og-image.png)
-
-🔗 **[Ver online](#)** _(atualize com a URL depois do deploy)_
-
-## Sobre
-
-Site pessoal de Guilherme Israel, desenvolvedor full-stack e estudante de Análise e Desenvolvimento de Sistemas. Reúne apresentação, stack, formação e os projetos em destaque, cada um com página de detalhe própria (sobre, destaques, vídeo e prints).
-
-## Stack
-
-- [React 19](https://react.dev/)
-- [Vite](https://vitejs.dev/)
-- CSS puro (custom properties, nesting nativo, sem framework de UI)
-
-## Rodando localmente
+## Rodar localmente
 
 ```bash
-npm install
-npm run dev
+npm i
+npm run dev      # http://localhost:5173
+npm run build    # typecheck + build estático em dist/
+npm run preview  # serve o build
 ```
 
-Build de produção:
+## Onde editar
 
-```bash
-npm run build
-npm run preview
-```
+- `src/data/projects.ts`: os 6 projetos (fases)
+- `src/data/certs.ts`: as certificações
+- `src/data/stack.ts`: inventário e faixa de stacks
+- `src/data/profile.ts`: textos do hero, sobre, formação, contato e rodapé
+- `public/foto.jpeg`: foto do Player Card
+- `public/og-preview.png`: imagem de preview (1200×630)
+- `index.html`: SEO e Open Graph (troque o domínio `guilhermeisrael.vercel.app` pelo seu)
 
-## Estrutura
+## Deploy
 
-```
-src/
-  components/   # Nav, Hero, About, Education, Projects, ProjectDetail, Contact
-  data/         # content.js — todo o conteúdo do site (textos, projetos, links)
-  App.jsx       # estado de navegação (home ↔ detalhe do projeto)
-public/
-  projects/<slug>/  # vídeo + prints de cada projeto
-```
+**Vercel:** importe o repositório em vercel.com/new, defina *Root Directory* = `portifolio`.
+O Vite é detectado sozinho (build `npm run build`, saída `dist`). O `vercel.json` faz
+`/projeto/:slug` funcionar ao recarregar a página.
 
-Editar textos, stack, projetos ou links de contato é feito em um único lugar: [`src/data/content.js`](src/data/content.js).
+**Netlify:** base `portifolio`, build `npm run build`, publish `dist`. O `public/_redirects` cuida das rotas.
 
-## Contato
-
-- E-mail: guilhermeisrael03@gmail.com
-- GitHub: [github.com/Guilherme3578](https://github.com/Guilherme3578)
-- LinkedIn: [linkedin.com/in/guilhermeisrael](https://linkedin.com/in/guilhermeisrael/)
+Extra: tente ↑ ↑ ↓ ↓ ← → ← → B A.

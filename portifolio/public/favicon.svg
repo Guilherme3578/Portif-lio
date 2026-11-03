@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-  <rect width="48" height="48" rx="12" fill="#050505" />
-  <text
-    x="24"
-    y="31"
-    text-anchor="middle"
-    font-family="'JetBrains Mono', ui-monospace, Consolas, monospace"
-    font-weight="700"
-    font-size="18"
-    fill="#6d5efc"
-  >GI.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" shape-rendering="crispEdges">
+  <rect width="16" height="16" fill="#07021a"/>
+  <g fill="#ff2e97">
+    <!-- G -->
+    <rect x="2" y="4" width="4" height="1"/><rect x="1" y="5" width="1" height="6"/>
+    <rect x="2" y="11" width="4" height="1"/><rect x="6" y="8" width="1" height="3"/>
+    <rect x="4" y="8" width="2" height="1"/><rect x="6" y="5" width="1" height="1"/>
+    <!-- I -->
+    <rect x="9" y="4" width="5" height="1"/><rect x="11" y="5" width="1" height="6"/>
+    <rect x="9" y="11" width="5" height="1"/>
+  </g>
 </svg>
